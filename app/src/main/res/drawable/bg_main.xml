@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background color -->
+    <item>
+        <shape>
+            <solid android:color="#FFFF00" /> <!-- Yellow background -->
+        </shape>
+    </item>
+
+    <!-- Diagonal dots pattern -->
+    <item>
+        <rotate android:fromDegrees="45">
+            <layer-list>
+                <!-- First row of dots -->
+                <item android:left="10dp" android:top="0dp">
+                    <shape>
+                        <size android:width="5dp" android:height="5dp" />
+                        <solid android:color="#FFFFFF" /> <!-- White dot -->
+                        <corners android:radius="2.5dp" /> <!-- Make it round -->
+                    </shape>
+                </item>
+                <item android:left="30dp" android:top="0dp">
+                    <shape>
+                        <size android:width="5dp" android:height="5dp" />
+                        <solid android:color="#FFFFFF" />
+                        <corners android:radius="2.5dp" />
+                    </shape>
+                </item>
+
+                <!-- Second row of dots -->
+                <item android:left="0dp" android:top="20dp">
+                    <shape>
+                        <size android:width="5dp" android:height="5dp" />
+                        <solid android:color="#FFFFFF" />
+                        <corners android:radius="2.5dp" />
+                    </shape>
+                </item>
+                <item android:left="20dp" android:top="20dp">
+                    <shape>
+                        <size android:width="5dp" android:height="5dp" />
+                        <solid android:color="#FFFFFF" />
+                        <corners android:radius="2.5dp" />
+                    </shape>
+                </item>
+            </layer-list>
+        </rotate>
+    </item>
+</layer-list>

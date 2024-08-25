@@ -1,3 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="welcome_to_ncrazynare">Welcome to \nCrazynare</string>
     <string name="app_name">Crazynare</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>
