@@ -1,7 +1,7 @@
 package com.example.crazynare.Connections
 
 
-import srk.syracuse.gameofcards.Fragments.HostFragment
+import com.example.crazynare.Model.Players
 import java.io.IOException
 import java.net.ServerSocket
 import java.net.Socket
@@ -18,10 +18,10 @@ class ServerConnectionThread : Thread() {
                         val socketListenThread = Thread(ServerListenerThread(socket))
                         socketListenThread.start()
                         val sendGameName =
-                            ServerSenderThread(socket, HostFragment.gameName.getText().toString())
+                            ServerSenderThread(socket, "Crazynare")
                         sendGameName.start()
                         socketUserMap[socket] = null
-                        if (socketUserMap.size == HostFragment.numberPlayers) {
+                        if (socketUserMap.size > 3) {
                             allPlayersJoined = true
                         }
                     }
@@ -35,7 +35,7 @@ class ServerConnectionThread : Thread() {
     companion object {
         const val SocketServerPORT: Int = 8080
         @JvmField
-        var socketUserMap: HashMap<Socket?, String?> = HashMap<Any?, Any?>()
+        var socketUserMap: HashMap<Socket?, String?> = HashMap<Socket?, String?>()
         var serverStarted: Boolean = false
         var serverSocket: ServerSocket? = null
         var allPlayersJoined: Boolean = false

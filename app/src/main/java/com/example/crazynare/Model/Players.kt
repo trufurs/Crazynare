@@ -9,7 +9,8 @@ package com.example.crazynare.Model
 data class Players(
     var playerName : String = "Player",
     var playerType : String = "Host",
-    var playerID : String = "1",
+    var playerID : Int = 1,
     var playerPenalty : Int = 0,
     var playerStatus : Boolean = false,
+    var originIp : String = "127.0.0.1"
 )

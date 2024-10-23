@@ -4,4 +4,35 @@
         <item name="android:background">@color/black_overlay</item>
         <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
     </style>
+
+    <style name="Dialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowMinWidthMajor">35%</item>
+        <item name="android:windowMinWidthMinor">95%</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+    </style>
+
+    <!-- Custom Dialog Style -->
+        <style name="CustomDialogStyle" parent="Theme.AppCompat.Dialog">
+            <!-- Make the window background transparent -->
+            <item name="android:windowBackground">@android:color/transparent</item>
+
+            <!-- Remove dialog title bar -->
+            <item name="android:windowNoTitle">true</item>
+
+            <!-- Custom animation for dialog entrance and exit -->
+            <item name="android:windowAnimationStyle">@style/CustomDialogAnimation</item>
+
+            <!-- Other dialog appearance options -->
+            <item name="android:windowMinWidthMajor">80%</item>
+            <item name="android:windowMinWidthMinor">80%</item>
+        </style>
+
+        <!-- Dialog Enter/Exit Animations -->
+        <style name="CustomDialogAnimation">
+            <item name="android:windowEnterAnimation">@anim/fade_in</item>
+            <item name="android:windowExitAnimation">@anim/fade_out</item>
+        </style>
 </resources>

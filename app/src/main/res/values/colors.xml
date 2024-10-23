@@ -19,4 +19,9 @@
     <color name="white">#FFFFFFFF</color>
     <color name="green">#00AA82</color>
     <color name="gray">#F2F2F2</color>
+    <color name="dialogBackgroundColor">#FFFFFF</color>
+    <color name="dialogTextColor">#333333</color>
+    <color name="positiveButtonColor">#4CAF50</color> <!-- Green -->
+    <color name="negativeButtonColor">#F44336</color> <!-- Red -->
+    <color name="buttonTextColor">#FFFFFF</color>
 </resources>
